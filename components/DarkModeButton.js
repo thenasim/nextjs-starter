@@ -12,15 +12,11 @@ export const DarkModeButton = () => {
   useEffect(() => setMounted(true));
 
   return (
-    <>
-      <button
-        onClick={() =>
-          theme === "light" ? setTheme("dark") : setTheme("light")
-        }
-        className="px-3 py-3 text-base font-semibold text-gray-800 bg-gray-100 rounded-md focus:outline-none dark:bg-gray-800 dark:text-gray-100"
-      >
-        {mounted ? theme === "dark" ? <FiSun /> : <BsMoon /> : <BsMoon />}
-      </button>
-    </>
+    <button
+      onClick={() => (theme === "light" ? setTheme("dark") : setTheme("light"))}
+      className="px-3 py-3 text-base font-semibold text-gray-800 bg-gray-100 rounded-md focus:outline-none dark:bg-gray-800 dark:text-gray-100"
+    >
+      {mounted ? theme === "dark" ? <FiSun /> : <BsMoon /> : <BsMoon />}
+    </button>
   );
 };
