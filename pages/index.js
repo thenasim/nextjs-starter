@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { DarkModeButton } from "../components/DarkModeButton";
+import { DarkModeButton } from "@/components/DarkModeButton";
 
 export default function Home() {
   return (
