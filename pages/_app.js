@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider
-      enableSystem={false}
+      enableSystem={true}
       enableColorScheme={false}
       attribute="class"
       disableTransitionOnChange
