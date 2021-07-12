@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ?? Using HSL color values */
 @layer base {
   :root {
-    --bg-body-light: #ffffff;
-    --bg-body-dark: #111827;
+    --bg-body-light: 0, 0%, 100%;
+    --bg-body-dark: 220.9, 39.3%, 11%;
   }
 }
 
 .dark {
-  @apply bg-gray-900;
+  @apply bg-body-dark;
 }
