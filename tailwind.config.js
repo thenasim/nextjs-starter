@@ -1,6 +1,6 @@
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
-    if (opacityValue !== undefined) {
+    if (!opacityValue) {
       return `hsla(var(${variableName}), ${opacityValue})`;
     }
     return `hsl(var(${variableName}))`;
@@ -13,16 +13,11 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
-      // ? Text
-      textColor: {},
-
-      // ? Background
-      backgroundColor: {
-        body: {
-          light: withOpacity("--bg-body-light"),
-          dark: withOpacity("--bg-body-dark"),
-        },
+      colors: {
+        body: withOpacity("--body"),
       },
+      textColor: {},
+      backgroundColor: {},
     },
   },
   variants: {
