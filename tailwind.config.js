@@ -1,6 +1,6 @@
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
-    if (!opacityValue) {
+    if (opacityValue) {
       return `hsla(var(${variableName}), ${opacityValue})`;
     }
     return `hsl(var(${variableName}))`;
