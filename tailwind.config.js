@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
     if (opacityValue) {
@@ -16,6 +18,9 @@ module.exports = {
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      sans: [...fontFamily.sans],
+    },
     extend: {
       colors: {
         body: withOpacity("--body"),

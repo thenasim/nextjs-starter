@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "dev:g-fonts": "node scripts/generateFontsCode.js"
   },
   "dependencies": {
-    "clsx": "1.1.1",
+    "classnames": "2.3.1",
     "framer-motion": "4.1.17",
     "next": "11.1.2",
     "next-seo": "4.28.1",
@@ -20,6 +21,7 @@
     "zustand": "3.6.0"
   },
   "devDependencies": {
+    "@nodelib/fs.walk": "1.2.8",
     "@types/react": "17.0.31",
     "autoprefixer": "10.3.7",
     "eslint": "7.32.0",
