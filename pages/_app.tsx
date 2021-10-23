@@ -1,7 +1,22 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
+import type { FC } from "react";
+import type { NextPage } from "next";
+import type { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: any) {
+type NextPageWithLayout = NextPage & {
+  Layout?: FC;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+const Noop: FC = ({ children }) => <>{children}</>;
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const Layout = Component.Layout || Noop;
+
   return (
     <ThemeProvider
       enableSystem={true}
@@ -9,7 +24,9 @@ function MyApp({ Component, pageProps }: any) {
       attribute="class"
       disableTransitionOnChange
     >
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
