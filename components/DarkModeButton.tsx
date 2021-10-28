@@ -1,24 +1,9 @@
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-
-// Icons
-import { BsMoon } from "react-icons/bs";
+import { useCurrentTheme } from "@/utils/useCurrentTheme";
+import { FiMoon } from "react-icons/fi";
 import { FiSun } from "react-icons/fi";
 
 export const DarkModeButton = () => {
-  const { theme, systemTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  const activeTheme = theme === "system" ? systemTheme : theme;
-
-  useEffect(() => setMounted(true), []);
-
-  const toggleTheme = () => {
-    if (activeTheme === "light") {
-      return setTheme("dark");
-    }
-    return setTheme("light");
-  };
+  const { isDark, toggleTheme } = useCurrentTheme();
 
   return (
     <button
@@ -26,7 +11,7 @@ export const DarkModeButton = () => {
       onClick={toggleTheme}
       className="px-3 py-3 text-base font-semibold text-gray-800 bg-gray-100 rounded-md focus:outline-none dark:bg-gray-800 dark:text-gray-100"
     >
-      {mounted ? activeTheme === "dark" ? <FiSun /> : <BsMoon /> : <BsMoon />}
+      {isDark ? <FiSun /> : <FiMoon />}
     </button>
   );
 };
