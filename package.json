@@ -18,7 +18,7 @@
     "react-dom": "17.0.2",
     "react-icons": "4.3.1",
     "react-use": "17.3.1",
-    "zustand": "3.6.4"
+    "zustand": "3.6.5"
   },
   "devDependencies": {
     "@nodelib/fs.walk": "1.2.8",
