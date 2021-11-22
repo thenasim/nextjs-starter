@@ -2,61 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-  Using HSL color values but Why?
-
-  Beacuse using the hex value we can't use opacity.
-  We have to RGBA or HSLA in order to use "opacity-1" like this in tailwind
-  reference: https://youtu.be/MAtaT8BZEAo
-*/
 @layer base {
   :root {
     /* * SOLID COLORS * */
-    --color-black: 0, 0%, 0%;
-    --color-white: 0, 0%, 100%;
-
-    /* * GRAY * */
-    --color-gray-900: 218, 0%, 2%;
-    --color-gray-800: 217, 13%, 16%;
-    --color-gray-700: 217, 12%, 25%;
-    --color-gray-600: 217, 10%, 35%;
-    --color-gray-500: 217, 8%, 46%;
-    --color-gray-400: 215, 7%, 64%;
-    --color-gray-300: 217, 6%, 80%;
-    --color-gray-200: 213, 5%, 89%;
-    --color-gray-100: 214, 2%, 95%;
-    --color-gray-50: 210, 0%, 98%;
+    --color-black: #ddd;
+    --color-white: #fff;
   }
 }
 
 .light {
-  --body-primary: var(--color-white);
-  --body-primary-2: var(--color-gray-100);
-  --body-primary-3: var(--color-gray-200);
-
-  --body-primary-inverse: var(--color-gray-900);
-  --body-primary-inverse-2: var(--color-gray-800);
-  --body-primary-inverse-3: var(--color-gray-700);
-
-  --txt-primary: var(--color-black);
-  --txt-primary-2: var(--color-gray-900);
-  --txt-primary-3: var(--color-gray-800);
+  @apply bg-white;
 }
 
 .dark {
-  --body-primary: var(--color-gray-900);
-  --body-primary-2: var(--color-gray-800);
-  --body-primary-3: var(--color-gray-700);
-
-  --body-primary-inverse: var(--color-white);
-  --body-primary-inverse-2: var(--color-gray-100);
-  --body-primary-inverse-3: var(--color-gray-200);
-
-  --txt-primary: var(--color-white);
-  --txt-primary-2: var(--color-gray-100);
-  --txt-primary-3: var(--color-gray-200);
+  @apply bg-gray-900;
 }
 
 body {
-  @apply bg-body-primary;
 }

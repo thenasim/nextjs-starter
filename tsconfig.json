@@ -17,8 +17,10 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/layouts/*": ["layouts/*"],
+      "@/styles/*": ["styles/*"],
       "@/utils/*": ["utils/*"],
-      "@/styles/*": ["styles/*"]
+      "@/data/*": ["data/*"],
+      "@/lib/*": ["lib/*"]
     },
     "incremental": true
   },
