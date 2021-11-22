@@ -11,12 +11,13 @@
 }
 
 .light {
-  @apply bg-white;
+  --body-main: #fff;
 }
 
 .dark {
-  @apply bg-gray-900;
+  --body-main: #111827;
 }
 
 body {
+  @apply bg-body-main;
 }

@@ -15,13 +15,17 @@ module.exports = {
     fontFamily: {
       sans: [...fontFamily.sans],
     },
-    extends: {
+    extend: {
       colors: {
         transparent: "transparent",
         current: "currentColor",
         white: "var(--color-white)",
         black: "var(--color-black)",
         "true-gray": colors.trueGray,
+
+        body: {
+          main: "var(--body-main)",
+        },
       },
     },
   },
