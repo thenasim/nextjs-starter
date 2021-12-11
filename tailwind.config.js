@@ -3,7 +3,7 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  purge: [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
@@ -21,7 +21,7 @@ module.exports = {
         current: "currentColor",
         white: "var(--color-white)",
         black: "var(--color-black)",
-        "true-gray": colors.trueGray,
+        neutral: colors.neutral,
 
         body: {
           main: "var(--body-main)",
