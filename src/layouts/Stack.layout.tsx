@@ -1,5 +1,6 @@
 import React from "react";
 import { joinStrings } from "$/utils/string.utils";
+import { Spacing } from "$/types/common.types";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   align?: "strecth" | "center" | "flex-start" | "flex-end";
@@ -9,7 +10,7 @@ interface Props extends React.HTMLAttributes<HTMLDivElement> {
     | "flex-end"
     | "space-between"
     | "space-around";
-  spacing?: "xs" | "sm" | "md" | "lg" | "xl";
+  spacing?: Spacing;
   children: React.ReactNode;
 }
 
