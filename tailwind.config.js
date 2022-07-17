@@ -278,7 +278,15 @@ module.exports = {
   darkMode: "class",
   theme: {
     colors: { ...colors.common },
-    extend: {},
+    extend: {
+      spacing: {
+        xs: "4px",
+        sm: "7px",
+        md: "11px",
+        lg: "16px",
+        xl: "22px",
+      },
+    },
   },
   plugins: [],
 };
